@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+
 @Getter
 @Setter
 @ToString
@@ -18,10 +19,5 @@ import lombok.ToString;
 @Builder
 @JsonInclude(value = Include.NON_DEFAULT)
 public class UserBusRequest {
-	int bookingId;
-	String name;
-	String email;
-	String address;
-	long contactNo;
-
+	private UserBusDto userBusDto;
 }

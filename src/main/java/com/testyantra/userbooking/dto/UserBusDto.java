@@ -1,6 +1,9 @@
 package com.testyantra.userbooking.dto;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
 
@@ -14,7 +17,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-//@Table(name = "Bus_Booking")
 @Getter
 @Setter
 @ToString
@@ -23,9 +25,10 @@ import lombok.ToString;
 @Builder
 @JsonInclude(value = Include.NON_DEFAULT)
 @Component
-@Entity()
+@Entity
 public class UserBusDto {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	int bookingId;
 	String name;
 	String email;
