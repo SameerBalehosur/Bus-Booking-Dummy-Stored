@@ -25,5 +25,6 @@ public class UserBusResponse {
 	String statusDesc;
 	String message;
 	List<UserBusDto> listOfUsers;
+	
 
 }
