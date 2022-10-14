@@ -23,6 +23,7 @@ public class UserController {
 	@PostMapping("/addUser")
 	public ResponseEntity<UserBusResponse> addUser(@RequestBody UserBusDto busRequest) {
 		UserBusResponse addUser = userBusService.addUser(busRequest);
+		System.out.println("Hello");
 		return new ResponseEntity<UserBusResponse>(addUser,HttpStatus.OK)  ;
 	}
 	
